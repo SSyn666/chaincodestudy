@@ -77,19 +77,19 @@ func (t *chainCodeStudy1) Init(stub shim.ChaincodeStubInterface) pb.Response {
 	}
 	fmt.Printf("Aval = %d, Bval = %d\n", Aval, Bval)
 
-	/************
-			// Write the state to the ledger
-			err = stub.PutState(A, []byte(strconv.Itoa(Aval))
-			if err != nil {
-				return nil, err
-			}
+	
+	// Write the state to the ledger
+	err = stub.PutState(A, []byte(strconv.Itoa(Aval))
+	if err != nil {
+		return nil, err
+	}
 
-			stub.PutState(B, []byte(strconv.Itoa(Bval))
-			err = stub.PutState(B, []byte(strconv.Itoa(Bval))
-			if err != nil {
-				return nil, err
-			}
-	************/
+	stub.PutState(B, []byte(strconv.Itoa(Bval))
+	err = stub.PutState(B, []byte(strconv.Itoa(Bval))
+	if err != nil {
+		return nil, err
+	}
+	
 	return shim.Success(nil)
 }
 
